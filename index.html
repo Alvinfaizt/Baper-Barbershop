@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Tailwind CSS (CDN for simple setup) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -28,29 +31,30 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="font-sans bg-white text-gray-900 antialiased selection:bg-black selection:text-white">
+<body class="font-sans bg-white text-gray-900 antialiased selection:bg-black selection:text-white overflow-x-hidden">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
-                    <a href="#" class="font-serif text-2xl font-bold text-gray-900 tracking-wider">
+                    <a href="#" class="font-serif text-2xl font-bold text-gray-900 tracking-wider" data-aos="fade-down" data-aos-duration="800">
                         BAPER<span class="text-gray-500">.</span>
                     </a>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
+                    <div class="ml-10 flex items-baseline space-x-8" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
                         <a href="#home" class="hover:text-gray-500 transition-colors px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="hover:text-gray-500 transition-colors px-3 py-2 text-sm font-medium">Tentang Kami</a>
                         <a href="#services" class="hover:text-gray-500 transition-colors px-3 py-2 text-sm font-medium">Layanan</a>
                         <a href="#booking" class="bg-black text-white hover:bg-gray-800 transition-colors px-5 py-2 rounded-sm text-sm font-bold uppercase tracking-wide">Booking</a>
                     </div>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden">
+                <div class="md:hidden" data-aos="fade-down">
                     <button type="button" id="mobile-menu-btn" class="text-gray-600 hover:text-black focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -64,6 +68,7 @@
         <div class="md:hidden hidden bg-gray-50 absolute w-full shadow-xl border-b border-gray-200" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block hover:text-gray-600 px-3 py-2 text-base font-medium">Home</a>
+                <a href="#about" class="block hover:text-gray-600 px-3 py-2 text-base font-medium">Tentang Kami</a>
                 <a href="#services" class="block hover:text-gray-600 px-3 py-2 text-base font-medium">Layanan</a>
                 <a href="#booking" class="block text-black px-3 py-2 text-base font-bold">Booking Sekarang</a>
             </div>
@@ -73,16 +78,16 @@
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
         <!-- Background Overlay -->
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-no-repeat bg-fixed opacity-10"></div>
+        <div class="absolute inset-0 bg-[url('assets/images/hero-bg.png')] bg-cover bg-center bg-no-repeat bg-fixed opacity-15"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white"></div>
 
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <p class="text-gray-500 font-medium tracking-[0.2em] uppercase mb-4 text-sm md:text-base">Premium Gentlemen's Grooming</p>
-            <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight text-black">Pengalaman Grooming <br><span class="italic font-light">Eksklusif</span></h1>
-            <p class="text-gray-600 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">Tingkatkan gaya dan kepercayaan diri Anda bersama barber profesional kami. Khusus pria yang menghargai kualitas.</p>
+            <p data-aos="fade-up" data-aos-duration="1000" class="text-gray-500 font-medium tracking-[0.2em] uppercase mb-4 text-sm md:text-base">Premium Gentlemen's Grooming</p>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight text-black">Pengalaman Grooming <br><span class="italic font-light">Eksklusif</span></h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="text-gray-600 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">Tingkatkan gaya dan kepercayaan diri Anda bersama barber profesional kami. Khusus pria yang menghargai kualitas.</p>
             
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#booking" class="bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-sm font-bold tracking-wide uppercase transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#booking" class="bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-sm font-bold tracking-wide uppercase transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto shadow-lg">
                     Booking Sekarang
                 </a>
                 <a href="#services" class="border border-black/30 hover:border-black hover:text-black px-8 py-4 rounded-sm font-medium tracking-wide transition-all duration-300 w-full sm:w-auto backdrop-blur-sm">
@@ -91,7 +96,7 @@
             </div>
 
             <!-- Quick Info -->
-            <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-black/10 pt-8 text-sm">
+            <div data-aos="fade-in" data-aos-duration="1500" data-aos-delay="800" class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-black/10 pt-8 text-sm">
                 <div class="flex items-center justify-center md:justify-end gap-3 text-gray-600">
                     <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <span>Senin - Minggu | 10:00 - 21:00</span>
@@ -104,10 +109,48 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right" data-aos-duration="1200" class="relative">
+                    <div class="rounded-lg overflow-hidden shadow-2xl relative z-10 border border-gray-100">
+                        <img src="assets/images/about.png" alt="Barber in action" class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Decorative Element -->
+                    <div class="absolute -bottom-6 -right-6 w-full h-full bg-gray-100 rounded-lg -z-10"></div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Seni & <span class="text-gray-500 italic font-light">Presisi</span></h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Kami percaya bahwa grooming pria bukanlah sekadar rutinitas, melainkan sebuah seni yang membutuhkan tingkat presisi tinggi, pengalaman bertahun-tahun, dan dedikasi penuh pada kerajinan.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Setiap master barber kami dilatih secara khusus untuk mendengarkan keinginan Anda dan memberikan sentuhan terbaik yang sesuai dengan bentuk wajah serta gaya hidup personal Anda. Rasakan pengalaman potong rambut kelas satu di kursi premium kami.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8 border-y border-gray-100 py-6">
+                        <div>
+                            <h4 class="text-3xl font-serif font-bold text-black mb-1">5+</h4>
+                            <p class="text-sm text-gray-500 uppercase tracking-wide">Tahun Pengalaman</p>
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-serif font-bold text-black mb-1">10k+</h4>
+                            <p class="text-sm text-gray-500 uppercase tracking-wide">Klien Puas</p>
+                        </div>
+                    </div>
+                    <a href="#services" class="inline-flex items-center text-black font-bold uppercase tracking-wider group hover:text-gray-600 transition-colors">
+                        <span class="mr-2">Jelajahi Layanan Kami</span>
+                        <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="services" class="py-24 bg-gray-50 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">Layanan <span class="text-gray-500 italic font-light">Kami</span></h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Perawatan komprehensif yang disesuaikan untuk menyempurnakan penampilan Anda.</p>
                 <div class="w-16 h-0.5 bg-black mx-auto mt-6"></div>
@@ -116,7 +159,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-12 gap-y-8 max-w-5xl mx-auto">
                 
                 <!-- Service Item -->
-                <div class="group border-b border-black/10 pb-6 hover:border-black/50 transition-colors">
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" class="group border-b border-black/10 pb-6 hover:border-black/50 transition-colors">
                     <div class="flex justify-between items-baseline mb-2">
                         <h3 class="text-xl font-medium text-gray-900 group-hover:text-black transition-colors">Premium Haircut</h3>
                         <span class="text-black font-serif text-xl font-semibold">Rp 85.000</span>
@@ -125,7 +168,7 @@
                 </div>
 
                 <!-- Service Item -->
-                <div class="group border-b border-black/10 pb-6 hover:border-black/50 transition-colors">
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" class="group border-b border-black/10 pb-6 hover:border-black/50 transition-colors">
                     <div class="flex justify-between items-baseline mb-2">
                         <h3 class="text-xl font-medium text-gray-900 group-hover:text-black transition-colors">Hot Towel Shave</h3>
                         <span class="text-black font-serif text-xl font-semibold">Rp 65.000</span>
@@ -134,7 +177,7 @@
                 </div>
 
                 <!-- Service Item -->
-                <div class="group border-b border-black/10 pb-6 hover:border-black/50 transition-colors">
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" class="group border-b border-black/10 pb-6 hover:border-black/50 transition-colors">
                     <div class="flex justify-between items-baseline mb-2">
                         <h3 class="text-xl font-medium text-gray-900 group-hover:text-black transition-colors">Hair Coloring</h3>
                         <span class="text-black font-serif text-xl font-semibold">Rp 150.000+</span>
@@ -143,7 +186,7 @@
                 </div>
 
                 <!-- Service Item -->
-                <div class="group border-b border-black/10 pb-6 hover:border-black/50 transition-colors">
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" class="group border-b border-black/10 pb-6 hover:border-black/50 transition-colors">
                     <div class="flex justify-between items-baseline mb-2">
                         <h3 class="text-xl font-medium text-gray-900 group-hover:text-black transition-colors">Gentleman's Package</h3>
                         <span class="text-black font-serif text-xl font-semibold">Rp 135.000</span>
@@ -156,9 +199,9 @@
     </section>
 
     <!-- Booking Section -->
-    <section id="booking" class="py-24 bg-white relative border-t border-black/5">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gray-50 p-8 md:p-12 rounded-lg border border-black/5 shadow-xl relative overflow-hidden">
+    <section id="booking" class="py-24 bg-white relative border-t border-black/5 overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div data-aos="zoom-in-up" data-aos-duration="1000" class="bg-gray-50 p-8 md:p-12 rounded-lg border border-black/5 shadow-2xl relative overflow-hidden">
                 <!-- Decor -->
                 <div class="absolute top-0 right-0 w-32 h-32 bg-black/5 rounded-bl-full"></div>
                 
@@ -170,9 +213,9 @@
                 <form id="bookingForm" class="space-y-6 relative z-10">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- Select Service -->
-                        <div>
+                        <div data-aos="fade-up" data-aos-delay="100">
                             <label class="block text-sm font-medium text-gray-600 mb-2">Pilih Layanan</label>
-                            <select id="service" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors appearance-none cursor-pointer">
+                            <select id="service" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors appearance-none cursor-pointer shadow-sm">
                                 <option value="" disabled selected>-- Pilih Layanan --</option>
                                 <option value="haircut">Premium Haircut</option>
                                 <option value="shave">Hot Towel Shave</option>
@@ -182,9 +225,9 @@
                         </div>
 
                         <!-- Select Barber -->
-                        <div>
+                        <div data-aos="fade-up" data-aos-delay="200">
                             <label class="block text-sm font-medium text-gray-600 mb-2">Pilih Barber</label>
-                            <select id="barber" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors appearance-none cursor-pointer">
+                            <select id="barber" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors appearance-none cursor-pointer shadow-sm">
                                 <option value="" disabled selected>-- Siapapun (Tersedia) --</option>
                                 <option value="alex">Alex (Master Barber)</option>
                                 <option value="budi">Budi (Senior Barber)</option>
@@ -193,15 +236,15 @@
                         </div>
 
                         <!-- Date -->
-                        <div>
+                        <div data-aos="fade-up" data-aos-delay="300">
                             <label class="block text-sm font-medium text-gray-600 mb-2">Tanggal</label>
-                            <input type="date" id="date" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors">
+                            <input type="date" id="date" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors shadow-sm">
                         </div>
 
                         <!-- Time -->
-                        <div>
+                        <div data-aos="fade-up" data-aos-delay="400">
                             <label class="block text-sm font-medium text-gray-600 mb-2">Waktu</label>
-                            <select id="time" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors appearance-none cursor-pointer">
+                            <select id="time" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors appearance-none cursor-pointer shadow-sm">
                                 <option value="" disabled selected>-- Pilih Waktu --</option>
                                 <option value="10:00">10:00</option>
                                 <option value="11:00">11:00</option>
@@ -215,20 +258,22 @@
 
                     <!-- Name & Phone -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
+                        <div data-aos="fade-up" data-aos-delay="500">
                             <label class="block text-sm font-medium text-gray-600 mb-2">Nama Lengkap</label>
-                            <input type="text" id="name" placeholder="John Doe" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors">
+                            <input type="text" id="name" placeholder="John Doe" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors shadow-sm">
                         </div>
-                        <div>
+                        <div data-aos="fade-up" data-aos-delay="600">
                             <label class="block text-sm font-medium text-gray-600 mb-2">Nomor WhatsApp</label>
-                            <input type="tel" id="phone" placeholder="0812xxxxxx" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors">
+                            <input type="tel" id="phone" placeholder="0812xxxxxx" required class="w-full bg-white border border-gray-300 text-gray-900 rounded-sm px-4 py-3 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors shadow-sm">
                         </div>
                     </div>
 
-                    <button type="submit" class="w-full bg-black hover:bg-gray-800 text-white font-bold py-4 rounded-sm tracking-widest uppercase transition-all duration-300 mt-4 group flex items-center justify-center gap-2">
-                        <span>Konfirmasi Booking</span>
-                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </button>
+                    <div data-aos="fade-up" data-aos-delay="700">
+                        <button type="submit" class="w-full bg-black hover:bg-gray-800 text-white font-bold py-4 rounded-sm tracking-widest uppercase transition-all duration-300 mt-4 group flex items-center justify-center gap-2">
+                            <span>Konfirmasi Booking</span>
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </div>
                     
                     <!-- Alert Success Message (Hidden by default) -->
                     <div id="bookingAlert" class="hidden mt-4 p-4 bg-green-50 border border-green-500/50 text-green-700 rounded-sm text-center text-sm">
@@ -244,7 +289,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                 <!-- Brand -->
-                <div>
+                <div data-aos="fade-up" data-aos-duration="800">
                     <a href="#" class="font-serif text-3xl font-bold text-gray-900 tracking-wider block mb-4">
                         BAPER<span class="text-gray-500">.</span>
                     </a>
@@ -264,7 +309,7 @@
                 </div>
 
                 <!-- Kontak -->
-                <div>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <h4 class="text-gray-900 font-bold mb-4 uppercase tracking-wider text-sm">Hubungi Kami</h4>
                     <ul class="space-y-3 text-sm text-gray-600">
                         <li class="flex items-start">
@@ -279,7 +324,7 @@
                 </div>
 
                 <!-- Maps Link -->
-                <div>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <h4 class="text-gray-900 font-bold mb-4 uppercase tracking-wider text-sm">Lokasi</h4>
                     <p class="text-gray-600 text-sm mb-4">
                         Jl. Sudirman No. 123, Jakarta Selatan, 12190
@@ -301,7 +346,15 @@
         </div>
     </footer>
 
-    <!-- Custom JavaScript -->
+    <!-- AOS JS and Custom JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            once: true, // whether animation should happen only once - while scrolling down
+            offset: 50, // offset (in px) from the original trigger point
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
