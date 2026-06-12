@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.classList.add('bg-charcoal', 'shadow-lg');
+            navbar.classList.add('bg-white', 'shadow-lg');
             navbar.classList.remove('bg-transparent', 'py-2');
         } else {
-            navbar.classList.remove('bg-charcoal', 'shadow-lg');
+            navbar.classList.remove('bg-white', 'shadow-lg');
             navbar.classList.add('bg-transparent', 'py-2');
         }
     });
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = bookingForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<span>Terkirim! ✓</span>';
-            submitBtn.classList.remove('bg-gold');
+            submitBtn.classList.remove('bg-black');
             submitBtn.classList.add('bg-green-500', 'text-white');
 
             // Reset form
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 bookingAlert.classList.add('hidden');
                 
                 submitBtn.innerHTML = originalText;
-                submitBtn.classList.add('bg-gold');
+                submitBtn.classList.add('bg-black');
                 submitBtn.classList.remove('bg-green-500', 'text-white');
             }, 5000);
         }
